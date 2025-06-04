@@ -18,24 +18,40 @@ header h1 {
 }
 
 nav {
-  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 1em 0;
 }
-
 nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  background: #0055aa;
   color: #fff;
-  margin: 0 1em;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
+  transition: background 0.3s ease;
 }
 
+
 nav a:hover {
-  text-decoration: underline;
+  background: #003f80;
 }
 
 main {
   padding: 1.5em;
 }
-
+@media (max-width: 500px) {
+  nav a {
+    flex: 1 1 100%; /* ogni link prende tutta la riga */
+  }
+}
 table {
   width: 100%;
   border-collapse: collapse;
